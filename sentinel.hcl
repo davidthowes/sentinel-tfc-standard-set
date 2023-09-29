@@ -24,7 +24,7 @@ policy "restrict-all-vpc-traffic-acl-rules" {
 }
 
 import "static" "approved" {
-  source = "https://github.com/intel/policy-library-intel-aws/blob/933476c47663226963c11190ada0b26256725f10/approved.json"
+  source = "./approved.json"
   format = "json"
 }
 
