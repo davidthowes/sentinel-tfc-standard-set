@@ -23,6 +23,11 @@ policy "restrict-all-vpc-traffic-acl-rules" {
   enforcement_level = "advisory"
 }
 
+import "static" "approved" {
+  source = "https://github.com/intel/policy-library-intel-aws/blob/933476c47663226963c11190ada0b26256725f10/approved.json"
+  format = "json"
+}
+
 module "policy_summary" {
   source = "https://registry.terraform.io/v2/policies/intel/intel-aws/2.3.0/policy-module/policy_summary.sentinel?checksum=sha256:9f74775725d54b9004533fcabcdd01bd9b13da059cdcac0e1795f05a4bebfb7a"
 }
